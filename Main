@@ -1,0 +1,17 @@
+public class Main {
+    public static void main(String[] args) {
+        Şarjör şarjör1 = new Şarjör(8,3);
+        Silah silah1 = new Silah(15);
+        silah1.setŞarjör(şarjör1);
+
+        silah1.atesEt(20);
+        silah1.atesEt(12);
+        silah1.atesEt(9);
+        silah1.atesEt(5);
+        silah1.silahıDoldur();
+
+
+    }
+
+
+}
