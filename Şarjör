@@ -1,0 +1,43 @@
+public class Şarjör {
+    private int kapasite;
+    private int mevcutmermi;
+
+    public Şarjör(int kapasite, int mevcutmermi) {
+        if(kapasite>0) this.kapasite = kapasite;
+        else this.kapasite=1;
+        if(mevcutmermi>=0) this.mevcutmermi = mevcutmermi;
+        else this.mevcutmermi=0;
+    }
+    public void mermiAtesle(){
+        if(this.mevcutmermi>0) {
+            System.out.println("Bir mermi ateşlendi");
+            this.mevcutmermi -=1;
+        } else {
+            System.out.println("Şarjörde mermi yok. Şarjörü doldurun");
+        }
+    }
+    public void şarjörDoldur(){
+        this.mevcutmermi=this.kapasite;
+        System.out.println("Şarjör dolduruldu. Mermi sayısı: " + this.mevcutmermi);
+    }
+
+    public int getKapasite() {
+        return kapasite;
+    }
+
+    public void setKapasite(int kapasite) {
+        if(kapasite>0) this.kapasite = kapasite;
+        else this.kapasite=1;
+    }
+
+    public int getMevcutmermi() {
+        return mevcutmermi;
+    }
+
+    public void setMevcutmermi(int mevcutmermi) {
+        if(mevcutmermi>=0) this.mevcutmermi = mevcutmermi;
+        else this.mevcutmermi=0;
+    }
+
+
+}
