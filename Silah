@@ -1,0 +1,46 @@
+public class Silah {
+    private Şarjör şarjör;
+    private int etkinMenzil;
+
+    public Silah(int etkinMenzil) {
+        if(etkinMenzil>0) this.etkinMenzil = etkinMenzil;
+        else this.etkinMenzil=1;
+    }
+    public void atesEt(int hedefMenzili){
+        if(hedefMenzili<=0) hedefMenzili=1;
+        if(this.şarjör.getMevcutmermi()>0){
+            if(etkinMenzil>=hedefMenzili){
+                this.şarjör.setMevcutmermi(this.şarjör.getMevcutmermi()-1);
+                System.out.println(hedefMenzili + " uzaklıktaki hedefi vurdunuz. Kalan mermi: " + this.şarjör.getMevcutmermi());
+
+            } else {
+                this.şarjör.setMevcutmermi(this.şarjör.getMevcutmermi()-1);
+                System.out.println("Silahın etki menzili hedefe olan uzaklıktan az olduğu için hedefi vuramadınız. Kalan mermi: " +
+                this.şarjör.getMevcutmermi());
+
+            }
+        } else{
+            System.out.println("Silahınızda mermi yok şarjörü doldurun");
+        }
+    }
+    public void silahıDoldur(){
+        this.şarjör.şarjörDoldur();
+    }
+
+    public Şarjör getŞarjör() {
+        return şarjör;
+    }
+
+    public void setŞarjör(Şarjör şarjör) {
+        this.şarjör = şarjör;
+    }
+
+    public int getEtkinMenzil() {
+        return etkinMenzil;
+    }
+
+    public void setEtkinMenzil(int etkinMenzil) {
+        if(etkinMenzil>0) this.etkinMenzil = etkinMenzil;
+        else this.etkinMenzil=1;
+    }
+}
